@@ -20,4 +20,15 @@ const CONDITION = {
   GO_FORWARD: 1,
 };
 
-export { GAME_MSG, NEW_LINE, CONDITION };
+const DEFAULT_ERROR = '[ERROR] ';
+
+const ERROR_MSG = {
+  NOTHING: `${DEFAULT_ERROR}값을 입력해주세요.`,
+  MINUS_NUMBER: `${DEFAULT_ERROR}1 이상의 수만 입력해주세요.`,
+  NOT_INTEGER: `${DEFAULT_ERROR}정수만 입력해주세요.`,
+  AT_LEAST_TWO_CARS: `${DEFAULT_ERROR}2대 이상의 차 이름을 입력해주세요.`,
+  MORE_THAN_FIVE_LETTERS: `${DEFAULT_ERROR}차 이름은 5글자 이하로만 입력해주세요.`,
+  DUPLICATED: `${DEFAULT_ERROR}차 이름은 중복될 수 없습니다.`,
+};
+
+export { GAME_MSG, NEW_LINE, CONDITION, ERROR_MSG };
