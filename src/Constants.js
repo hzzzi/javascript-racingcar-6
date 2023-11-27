@@ -11,4 +11,13 @@ const GAME_MSG = {
 
 const NEW_LINE = '\n';
 
-export { GAME_MSG, NEW_LINE };
+const CONDITION = {
+  NUMBER_RANGE: {
+    FROM: 0,
+    TO: 9,
+  },
+  FORWARD_STANDARD: 4,
+  GO_FORWARD: 1,
+};
+
+export { GAME_MSG, NEW_LINE, CONDITION };
