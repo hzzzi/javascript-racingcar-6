@@ -1,4 +1,4 @@
-import { ERROR_MSG } from '../Constants';
+import { ERROR_MSG } from '../Constants.js';
 
 const carNameValidator = {
   isNothing(input) {

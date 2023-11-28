@@ -1,5 +1,5 @@
 import { MissionUtils } from '@woowacourse/mission-utils';
-import { CONDITION } from '../Constants';
+import { CONDITION } from '../Constants.js';
 
 class Car {
   #name;
