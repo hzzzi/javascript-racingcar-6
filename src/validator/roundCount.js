@@ -16,5 +16,11 @@ const roundCountValidator = {
       throw new Error(ERROR_MSG.NOT_INTEGER);
     }
   },
+
+  validateRoundCount(input) {
+    this.isNothing(input);
+    this.isPositive(input);
+    this.isInteger(input);
+  },
 };
 export default roundCountValidator;

@@ -23,5 +23,12 @@ const carNameValidator = {
       throw new Error(ERROR_MSG.DUPLICATED);
     }
   },
+
+  validateCarName(input) {
+    this.isNothing(input);
+    this.atLeastTwoCars(input);
+    this.moreThanFiveLetters(input);
+    this.isDuplicated(input);
+  },
 };
 export default carNameValidator;
