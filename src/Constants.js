@@ -5,6 +5,7 @@ const GAME_MSG = {
   },
   OUTPUT: {
     ROUND_RESULT: '실행 결과',
+    DASH: '-',
     WINNER: '최종 우승자 : ',
   },
 };
