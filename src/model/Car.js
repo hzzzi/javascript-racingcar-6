@@ -11,6 +11,10 @@ class Car {
     this.#position = 0;
   }
 
+  get Position() {
+    return this.#position;
+  }
+
   getRandomNumber() {
     return MissionUtils.Random.pickNumberInRange(
       CONDITION.NUMBER_RANGE.FROM,
