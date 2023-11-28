@@ -2,17 +2,13 @@ import { MissionUtils } from '@woowacourse/mission-utils';
 import { CONDITION } from '../Constants.js';
 
 class Car {
-  #name;
-
-  #position;
-
   constructor(name) {
-    this.#name = name;
-    this.#position = 0;
+    this.name = name;
+    this.position = 0;
   }
 
   get Position() {
-    return this.#position;
+    return this.position;
   }
 
   getRandomNumber() {
@@ -24,7 +20,7 @@ class Car {
 
   forwardOrStop() {
     if (this.getRandomNumber() >= CONDITION.FORWARD_STANDARD) {
-      this.#position += CONDITION.GO_FORWARD;
+      this.position += CONDITION.GO_FORWARD;
     }
   }
 }
