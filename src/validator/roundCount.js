@@ -12,7 +12,7 @@ const roundCountValidator = {
     }
   },
   isInteger(input) {
-    if (!Number.isInteger(input)) {
+    if (!Number.isInteger(Number(input))) {
       throw new Error(ERROR_MSG.NOT_INTEGER);
     }
   },
