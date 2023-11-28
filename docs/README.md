@@ -34,30 +34,24 @@
 - **Car**
   - 필드: 이름, 위치
   - 메소드: 0~9중 무작위 값 생성, 값에 따라 전진/그대로 진행, 진행 결과 위치에 저장
-- **Presenter**
-  - 한 횟수가 지날 때마다, 각각의 Car 위치를 받는다.
-  - 받은 위치로 실행결과 전달
-- **Judge**
-  - 각각의 Car 최종 위치 비교
-  - 최종 우승자 선정
 
-### controller
+### MainController
 
-- 게임 세팅
+- 게임 세팅(.setGame)
 
   - 사용자에게 자동차 이름, 시도횟수 받아옴 (Inputview)
   - 입력값 유효성 검사 (Validator)
   - 입력받은 이름으로 각각의 Car 객체 생성 (Car)
 
-- 게임 실행
+- 게임 실행(.playOneRound)
 
   - Car 객체에 무작위 값에 따라 전진/그대로 요청 (Car)
-  - 실행 결과 출력 (Presenter, OutputView)
-  - 이동 횟수만큼 반복 (Car, Presenter)
+  - 실행 결과 출력 (OutputView)
+  - 이동 횟수만큼 반복 (Car)
 
-- 게임 정리
+- 게임 정리(.calcWinner)
   - 각각의 Car 최종위치 확인 (Car)
-  - 최종 우승자 선정 (Judge)
+  - 최종 우승자 선정
   - 최종 우승자 출력 (OutputView)
 
 ### Validator
