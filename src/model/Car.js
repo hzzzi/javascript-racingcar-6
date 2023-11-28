@@ -23,7 +23,7 @@ class Car {
   }
 
   forwardOrStop() {
-    if (this.makeRandomNumber() >= CONDITION.FORWARD_STANDARD) {
+    if (this.getRandomNumber() >= CONDITION.FORWARD_STANDARD) {
       this.#position += CONDITION.GO_FORWARD;
     }
   }
