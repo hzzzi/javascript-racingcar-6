@@ -5,9 +5,9 @@ import Car from './model/Car.js';
 import OutputView from './view/OutputView.js';
 
 class MainController {
-  #cars;
+  #cars = [];
 
-  #roundCount;
+  #roundCount = 0;
 
   createCars(carNames) {
     carNames.forEach((name) => {
@@ -33,14 +33,33 @@ class MainController {
     });
   }
 
-  race() {
-    this.setGame();
+  calcWinner() {
+    let winners = [];
+    let winnerPosition = 0;
+
+    this.#cars.forEach((car) => {
+      if (winnerPosition < car.position) {
+        winnerPosition = car.position;
+        winners = [car.name];
+      }
+      if (winnerPosition === car.position) {
+        winners.push(car.name);
+      }
+    });
+    return winners;
+  }
+
+  async race() {
+    await this.setGame();
 
     OutputView.printRoundResult();
 
     for (let i = 0; i < this.#roundCount; i += 1) {
       this.playOneRound();
     }
+
+    const winners = this.calcWinner();
+    OutputView.printWinner(winners);
   }
 }
 

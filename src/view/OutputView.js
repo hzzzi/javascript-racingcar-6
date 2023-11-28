@@ -1,5 +1,5 @@
 import { Console } from '@woowacourse/mission-utils';
-import { GAME_MSG } from '../Constants';
+import { GAME_MSG } from '../Constants.js';
 
 const OutputView = {
   printRoundResult() {
@@ -10,8 +10,8 @@ const OutputView = {
     Console.print(`${car.name} : ${GAME_MSG.OUTPUT.DASH.repeat(car.position)}`);
   },
 
-  printWinner() {
-    Console.print(GAME_MSG.OUTPUT.WINNER);
+  printWinner(winners) {
+    Console.print(GAME_MSG.OUTPUT.WINNER + winners);
   },
 };
 
