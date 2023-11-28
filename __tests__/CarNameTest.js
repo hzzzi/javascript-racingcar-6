@@ -1,7 +1,7 @@
 import { ERROR_MSG } from '../src/Constants';
 import carNameValidator from '../src/validator/carName';
 
-describe('자동차 이름 테스트', () => {
+describe('자동차 이름 입력 테스트', () => {
   test('입력값이 없으면 예외 발생', () => {
     expect(() => {
       const input = '';
