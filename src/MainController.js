@@ -5,9 +5,14 @@ import Car from './model/Car.js';
 import OutputView from './view/OutputView.js';
 
 class MainController {
-  #cars = [];
+  #cars;
 
-  #roundCount = 0;
+  #roundCount;
+
+  constructor() {
+    this.#cars = [];
+    this.#roundCount = 0;
+  }
 
   createCars(carNames) {
     carNames.forEach((name) => {
@@ -38,11 +43,10 @@ class MainController {
     let winnerPosition = 0;
 
     this.#cars.forEach((car) => {
-      if (winnerPosition < car.position) {
-        winnerPosition = car.position;
+      if (winnerPosition < car.Position) {
+        winnerPosition = car.Position;
         winners = [car.name];
-      }
-      if (winnerPosition === car.position) {
+      } else if (winnerPosition === car.Position) {
         winners.push(car.name);
       }
     });
