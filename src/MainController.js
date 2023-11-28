@@ -3,6 +3,7 @@ import roundCountValidator from './validator/roundCount.js';
 import InputView from './view/InputView.js';
 import Car from './model/Car.js';
 import OutputView from './view/OutputView.js';
+import { NEW_LINE } from './Constants.js';
 
 class MainController {
   #cars;
@@ -36,6 +37,7 @@ class MainController {
       car.forwardOrStop();
       OutputView.printMoveResult(car);
     });
+    OutputView.printNewLine();
   }
 
   calcWinner() {
