@@ -16,7 +16,7 @@ describe('Car class 테스트', () => {
 
   test('랜덤값이 4이상일 떄 이동하는지', () => {
     const car = new Car('pobi');
-    const originalPosition = car.position;
+    const originalPosition = car.Position;
     car.forwardOrStop();
     if (car.getRandomNumber() >= 4) {
       expect(car.position).toBe(originalPosition + 1);
