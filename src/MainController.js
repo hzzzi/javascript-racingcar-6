@@ -3,7 +3,6 @@ import roundCountValidator from './validator/roundCount.js';
 import InputView from './view/InputView.js';
 import Car from './model/Car.js';
 import OutputView from './view/OutputView.js';
-import { NEW_LINE } from './Constants.js';
 
 class MainController {
   #cars;
@@ -40,6 +39,14 @@ class MainController {
     OutputView.printNewLine();
   }
 
+  race() {
+    OutputView.printRoundResult();
+
+    for (let i = 0; i < this.#roundCount; i += 1) {
+      this.playOneRound();
+    }
+  }
+
   calcWinner() {
     let winners = [];
     let winnerPosition = 0;
@@ -55,15 +62,7 @@ class MainController {
     return winners;
   }
 
-  async race() {
-    await this.setGame();
-
-    OutputView.printRoundResult();
-
-    for (let i = 0; i < this.#roundCount; i += 1) {
-      this.playOneRound();
-    }
-
+  showWinners() {
     const winners = this.calcWinner();
     OutputView.printWinner(winners);
   }
